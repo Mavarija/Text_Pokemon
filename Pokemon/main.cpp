@@ -1,12 +1,21 @@
 #include <iostream>
 using namespace std;
 
+// pokemon choice enums
+enum EPokemonChoice
+{
+    EPC_Charmander,
+    EPC_Bulbasaur,
+    EPC_Squirtle,
+    EPC_InvalidChoice
+};
+
 int main() {
     
     // variables
     string playerName{};
     int choice{};
-    string chosenPokemon{};
+    EPokemonChoice EChosenPokemon = EPC_InvalidChoice;
 
     // intro message
     cout << "Professor Oak: Hello there! Welcome to the world of Pokemon!\n";
@@ -31,32 +40,58 @@ int main() {
     cout << "Professor Oak: So, which one will it be? Enter the number of your choice: ";
     cin >> choice;
 
-    // store choice based on input
+    // map choice to enum value
     switch (choice)
     {
     case 1:
-        chosenPokemon = "Charmander";
-        cout << "\nProfessor Oak: A fiery choice! " << chosenPokemon << " is yours!\n";
+        EChosenPokemon = EPC_Charmander;
         break;
     case 2:
-        chosenPokemon = "Bulbasaur";
-        cout << "\nProfessor Oak: A fine choice! " << chosenPokemon << " is always ready to grow on you!\n";
+        EChosenPokemon = EPC_Bulbasaur;
         break;
     case 3:
-        chosenPokemon = "Squirtle";
-        cout << "\nProfessor Oak: Splendid! " << chosenPokemon << " will keep you cool under pressure!\n";
+        EChosenPokemon = EPC_Squirtle;
+        break;
+    default:
+        EChosenPokemon = EPC_InvalidChoice;
+        break;
+    }
+
+    // respond based on chosen pokemon
+    switch (EChosenPokemon)
+    {
+    case EPC_Charmander:
+        cout << "\nProfessor Oak: A fiery choice! Charmander is yours!\n";
+        break;
+    case EPC_Bulbasaur:
+        cout << "\nProfessor Oak: A fine choice! Bulbasaur is always ready to grow on you!\n";
+        break;
+    case EPC_Squirtle:
+        cout << "\nProfessor Oak: Splendid! Squirtle will keep you cool under pressure!\n";
         break;
     default:
         // select Charmander if invalid choice
-        chosenPokemon = "Charmander";
+        EChosenPokemon = EPC_Charmander;
         cout << "\nProfessor Oak: Hmm, that doesn't seem right. Let me choose for you...\n";
-        cout << "Professor Oak: Just kidding! Let's go with " << chosenPokemon << ", the fiery dragon in the making!\n";
+        cout << "Professor Oak: Just kidding! Let's go with Charmander, the fiery dragon in the making!\n";
         break;
     }
     
     // conclusion message
-    cout << "Professor Oak: " << chosenPokemon << " and you, " << playerName << ", are going to be the best of friends!\n";
+    cout << "\nProfessor Oak: " << (EChosenPokemon == EPC_Charmander ? "Charmander" : EChosenPokemon == EPC_Bulbasaur ? "Bulbasaur" : "Squirtle")
+         << " and you, " << playerName << ", are going to be the best of friends!\n";
     cout << "Professor Oak: Your journey begins now! Get ready to explore the vast world of Pokemon!\n";
+
+    // Ternary operator = compact if else statement
+/*
+    if (EChosenPokemon == EPC_Charmander)
+        return "Charmander";
+    else if (EChosenPokemon == EPC_Bulbasaur)
+        return "Bulbasaur";
+    else
+        return "Squirtle";
+*/
+
 
     return 0;
 }
