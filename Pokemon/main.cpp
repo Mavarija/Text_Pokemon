@@ -5,14 +5,15 @@ int main() {
     
     // variables
     string playerName{};
-    int pokeChoice{};
+    int choice{};
+    string chosenPokemon{};
 
     // intro message
     cout << "Professor Oak: Hello there! Welcome to the world of Pokemon!\n";
     cout << "Professor Oak: My name is Oak. People call me the Pokemon Professor!\n";
     cout << "Professor Oak: But enough about me. Let's talk about you!\n";
 
-    // player input
+    // player input - name
     cout << "Professor Oak: First, tell me, what's your name?\n\n";
     cin >> playerName;
     cout << "\n";
@@ -26,33 +27,36 @@ int main() {
     cout << "2. Bulbasaur - The grass type. Calm and collected!\n";
     cout << "3. Squirtle - The water type. Cool as a cucumber!\n\n";
 
+    // player input - pokemon choice
     cout << "Professor Oak: So, which one will it be? Enter the number of your choice: ";
-    cin >> pokeChoice;
+    cin >> choice;
 
-    // choice logic
-    if (pokeChoice == 1)
+    // store choice based on input
+    switch (choice)
     {
-        cout << "Professor Oak: A fiery choice! Charmander is yours!\n";
-        pokeChoice = 1;
+    case 1:
+        chosenPokemon = "Charmander";
+        cout << "\nProfessor Oak: A fiery choice! " << chosenPokemon << " is yours!\n";
+        break;
+    case 2:
+        chosenPokemon = "Bulbasaur";
+        cout << "\nProfessor Oak: A fine choice! " << chosenPokemon << " is always ready to grow on you!\n";
+        break;
+    case 3:
+        chosenPokemon = "Squirtle";
+        cout << "\nProfessor Oak: Splendid! " << chosenPokemon << " will keep you cool under pressure!\n";
+        break;
+    default:
+        // select Charmander if invalid choice
+        chosenPokemon = "Charmander";
+        cout << "\nProfessor Oak: Hmm, that doesn't seem right. Let me choose for you...\n";
+        cout << "Professor Oak: Just kidding! Let's go with " << chosenPokemon << ", the fiery dragon in the making!\n";
+        break;
     }
-    else if (pokeChoice == 2)
-    {
-        cout << "Professor Oak: A fine choice! Bulbasaur is always ready to grow on you!\n";
-        pokeChoice = 2;
-    }
-    else if (pokeChoice == 3)
-    {
-        cout << "Professor Oak: Splendid! Squirtle will keep you cool under pressure!\n";
-        pokeChoice = 3;
-    }
-    else
-    {
-        cout << "Professor Oak: Hmm, that doesn't seem right. Let me choose for you...\n";
-
-        // select Chairmander if invalid choice
-        pokeChoice = 1;
-        cout << "Professor Oak: Just kidding! Let's go with Charmander, the fiery dragon in the making!\n";
-    }
+    
+    // conclusion message
+    cout << "Professor Oak: " << chosenPokemon << " and you, " << playerName << ", are going to be the best of friends!\n";
+    cout << "Professor Oak: Your journey begins now! Get ready to explore the vast world of Pokemon!\n";
 
     return 0;
 }
