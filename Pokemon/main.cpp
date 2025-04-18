@@ -29,14 +29,36 @@ public:
     EPokemonType type;
     int health;
 
-    // Constructors
-    CPokemon(){}
+    // Default constructor
+    CPokemon()
+    {
+        name = "Unknown";
+        type = EPokemonType::EPT_Normal;
+        health = 50;
+        cout << "A new Pokemon has been created with the default constructor!\n";
+    }
+    // Parameterized constructor
     CPokemon(string _name, EPokemonType _type, int _health)
     {
         name = _name;
         type = _type;
         health = _health;
+        cout << "A new Pokemon named " << name << " has been created!\n";
     }
+    // Copy constructor
+    CPokemon(const CPokemon& _other)
+    {
+        name = _other.name;
+        type = _other.type;
+        health = _other.health;
+        cout << "A new Pokemon has been copied from " << _other.name << "!\n";
+    }
+    // Destructor
+    ~CPokemon()
+    {
+        cout << name << " has been released.\n";
+    }
+
     // Method to attack
     void Attack()
     {
@@ -55,6 +77,21 @@ public:
     string name;
     CPokemon chosenPokemon;
     
+    // Default constructor
+    CPlayer()
+    {
+        name = "Trainer";
+        chosenPokemon = CPokemon(); // uses default CPokemon constructor
+        cout << "A new player named " << name << " has been created!\n";
+    }
+    // Parameterized constructor
+    CPlayer(string _name, CPokemon _chosenPokemon)
+    {
+        name = _name;
+        chosenPokemon = _chosenPokemon;
+        cout << "Player " << name << " has been created!\n";
+    }
+
     // Method to choose a Pokemon
     void ChoosePokemon(int _choice)
     {
@@ -89,6 +126,12 @@ class CProfessorOak
 public:
     // Members
     string name;
+
+    // Parameterized constructor
+    CProfessorOak(string _name)
+    {
+        name = _name;
+    }
 
     // Method to greet player
     void GreetPlayer(CPlayer& _player)
@@ -129,19 +172,36 @@ private:
 
 int main()
 {
-    // Creating Objects
-    CPlayer player;
-    CProfessorOak professor;
-    CPokemon placeholderPokemon;
+    // Test 1: default and param constructors
+    CPokemon defaultPokemon;
+    CPokemon charmander("Charmander", EPokemonType::EPT_Normal, 100);
+    cout << "Pokemon Details:\n";
+    cout << "Name: " << defaultPokemon.name << "\nType: " << (int)defaultPokemon.type << "\nHealth: " << defaultPokemon.health << "\n";
+    cout << "Name: " << charmander.name << "\nType: " << (int)charmander.type << "\nHealth: " << charmander.health << "\n";
 
-    // Assigning values
-    player.name = "Trainer";
-    professor.name = "Professor Oak";
-    placeholderPokemon.name = "Pikachu";
-    placeholderPokemon.type = EPokemonType::EPT_Electric;
-    placeholderPokemon.health = 40;
+    // Test 2: copy constructor
+    CPokemon bulbasaur("Bulbasaur", EPokemonType::EPT_Grass, 100);
+    CPokemon bulbasaurCopy = bulbasaur;
+    cout << "Original Pokemon Health: " << bulbasaur.health << "\n";
+    cout << "Copied Pokemon Health: " << bulbasaurCopy.health << "\n";
+    
+    // Modify the copied pokemon
+    bulbasaurCopy.health = 80;
+    cout << "After Modification:\n";
+    cout << "Original Pokemon Health: " << bulbasaur.health << "\n";
+    cout << "Copied Pokemon Health: " << bulbasaurCopy.health << "\n";
 
-    // Calling methods
+    // Test 3: destructor
+    {
+        CPokemon squirtle("Squirtle", EPokemonType::EPT_Water, 100);
+    }
+
+
+    // Continue with the main flow of the game
+    CProfessorOak professor("ProfessorOak");
+    CPlayer player("Ash", charmander);
+
+    // Greet player and offer Pokemon choice
     professor.GreetPlayer(player);
     professor.OfferPokemonChoices(player);
 
