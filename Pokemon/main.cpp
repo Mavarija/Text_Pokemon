@@ -1,6 +1,25 @@
 #include <iostream>
+#include <limits>
 #include <string>
 using namespace std;
+
+// Function to clear the console
+void ClearConsole()
+{
+    // Platform-specific clear console command
+#ifdef _WIN32
+    system("cls");
+#else
+    (void)system("clear");
+#endif
+}
+
+// Function to wait for user to press Enter
+void WaitForEnter()
+{
+    // Function that temporarily pauses the program, until the Enter key is pressed.
+    cin.get();
+}
 
 // Enums
 enum class EPokemonChoice
@@ -35,7 +54,6 @@ public:
         name = "Unknown";
         type = EPokemonType::EPT_Normal;
         health = 50;
-        cout << "A new Pokemon has been created with the default constructor!\n";
     }
     // Parameterized constructor
     CPokemon(string _name, EPokemonType _type, int _health)
@@ -43,7 +61,6 @@ public:
         name = _name;
         type = _type;
         health = _health;
-        cout << "A new Pokemon named " << name << " has been created!\n";
     }
     // Copy constructor
     CPokemon(const CPokemon& _other)
@@ -51,12 +68,10 @@ public:
         name = _other.name;
         type = _other.type;
         health = _other.health;
-        cout << "A new Pokemon has been copied from " << _other.name << "!\n";
     }
     // Destructor
     ~CPokemon()
     {
-        cout << name << " has been released.\n";
     }
 
     // Method to attack
@@ -82,14 +97,12 @@ public:
     {
         name = "Trainer";
         chosenPokemon = CPokemon(); // uses default CPokemon constructor
-        cout << "A new player named " << name << " has been created!\n";
     }
     // Parameterized constructor
     CPlayer(string _name, CPokemon _chosenPokemon)
     {
         name = _name;
         chosenPokemon = _chosenPokemon;
-        cout << "Player " << name << " has been created!\n";
     }
 
     // Method to choose a Pokemon
@@ -110,10 +123,11 @@ public:
         default:
             chosenPokemon = CPokemon("Charmander", EPokemonType::EPT_Fire, 100);
             cout << "\nProfessor Oak: Hmm, that doesn't seem right. Why don't I choose for you...\n";
-            
             break;
         }
         cout << "Player " << name << " chose " << chosenPokemon.name << "!\n";
+        cout << "Professor Oak: " << chosenPokemon.name << " and you, " << name << ", are going to be the best of friends!\n";
+        WaitForEnter();
     };
 
 private:
@@ -138,22 +152,26 @@ public:
     {
         // Introduction by the professor
         cout << name << ": Hello there! Welcome to the world of Pokemon!\n";
+        WaitForEnter();
         cout << name << ": My name is Oak. People call me the Pokemon Professor!\n";
         cout << name << ": But enough about me. Let's talk about you!\n";
+        WaitForEnter();
     };
 
     // Method to offer Pokemon choice to player
     void OfferPokemonChoices(CPlayer& _player)
     {
         // Taking player name as input
-        cout << name << ": First, tell me, what's your name?\n\n";
+        cout << name << ": First, tell me, what's your name?\nPlease enter your name: ";
         getline(cin, _player.name); // getline() - its a string function to store a string(only) input. In this case: player name which we'll pass in by reference.
         cout << "\n";
         cout << name << ": Ah, " << _player.name << "! What a fantastic name!\n";
+        WaitForEnter();
         cout << name << ": You must be eager to start your adventure. But first, you'll need a Pokemon of your own!\n";
 
         // Presenting Pokemon choices
         cout << name << ": I have three Pokemon here with me. They're all quite feisty!\n";
+        WaitForEnter();
         cout << name << ": Choose wisely...\n\n";
         cout << "1. Charmander - The fire type. A real hothead!\n";
         cout << "2. Bulbasaur - The grass type. Calm and collected!\n";
@@ -165,49 +183,61 @@ public:
         cin >> choice;
         // Call Player's ChoosePokemon() function and pass in the received value from our local int choice variable.
         _player.ChoosePokemon(choice);
+        WaitForEnter();
     };
+
+    // Method to explain quest
+    void ExplainMainQuest(CPlayer& _player)
+    {
+        ClearConsole();
+        cout << name << ": Oak-ay " << _player.name << ", I am about to explain your upcoming grand adventure.\n";
+        WaitForEnter();
+        cout << name << ": You see, becoming a Pokemon Master is no easy feat. It takes courage, wisdom, and a bit of luck.\n";
+        cout << name << ": Your mission, should you choose to accept it (and trust me, you really don't have a choice) is to collect all the Pokemon Badges and conquer the Pokemon League.\n\n";
+        WaitForEnter();
+        cout << _player.name << ": Wait... that sounds a lot like every other Pokemon game out there.\n\n";
+        WaitForEnter();
+        cout << name << ": Shhh! Don't break the fourth wall " << _player.name << "! This is serious business.\n";
+        WaitForEnter();
+        cout << name << ": To achieve this, you'll need to battle wild Pokemon, challenge gym leaders, and of course, keep your Pokemon healthy at the PokeCenter.\n";
+        cout << name << ": Along the way, you'll capture new Pokemon to strengthen your team. Just remember - there's a limit to how many Pokemon you can carry, so choose wisely!\n\n";
+        WaitForEnter();
+        cout << _player.name << ": Sounds like a walk in the park... right?\n\n";
+        WaitForEnter();
+        cout << name << ": Hah! That's what they all say! But beware, young Trainer, the path to victory is fraught with challenges. And if you lose a battle... well, let's just say you'll be starting from square one.\n";
+        WaitForEnter();
+        cout << name << ": So, what do you say? Are you ready to become the next Pokemon Champion?\n\n";
+        WaitForEnter();
+        cout << _player.name << ": Ready as I'll ever be, Professor!\n\n";
+        WaitForEnter();
+        cout << name << ": That's the spirit! Now, your journey begins.\n";
+        cout << name << ": But first... Let's just pretend I didn't forget to set up the actual game loop... Ahem, onwards!\n";
+        WaitForEnter();
+    }
+
+
 private:
 
 };
 
 int main()
 {
-    // Test 1: default and param constructors
-    CPokemon defaultPokemon;
-    CPokemon charmander("Charmander", EPokemonType::EPT_Normal, 100);
-    cout << "Pokemon Details:\n";
-    cout << "Name: " << defaultPokemon.name << "\nType: " << (int)defaultPokemon.type << "\nHealth: " << defaultPokemon.health << "\n";
-    cout << "Name: " << charmander.name << "\nType: " << (int)charmander.type << "\nHealth: " << charmander.health << "\n";
+    // Create objects
+    CProfessorOak professor("Professor Oak");
+    CPokemon charmander("Charmander", EPokemonType::EPT_Fire, 100);
+    CPlayer player("Ash",charmander);
 
-    // Test 2: copy constructor
-    CPokemon bulbasaur("Bulbasaur", EPokemonType::EPT_Grass, 100);
-    CPokemon bulbasaurCopy = bulbasaur;
-    cout << "Original Pokemon Health: " << bulbasaur.health << "\n";
-    cout << "Copied Pokemon Health: " << bulbasaurCopy.health << "\n";
-    
-    // Modify the copied pokemon
-    bulbasaurCopy.health = 80;
-    cout << "After Modification:\n";
-    cout << "Original Pokemon Health: " << bulbasaur.health << "\n";
-    cout << "Copied Pokemon Health: " << bulbasaurCopy.health << "\n";
-
-    // Test 3: destructor
-    {
-        CPokemon squirtle("Squirtle", EPokemonType::EPT_Water, 100);
-    }
-
-
-    // Continue with the main flow of the game
-    CProfessorOak professor("ProfessorOak");
-    CPlayer player("Ash", charmander);
-
-    // Greet player and offer Pokemon choice
+    // Greet player, Pokemon choice, main quest
     professor.GreetPlayer(player);
     professor.OfferPokemonChoices(player);
+    professor.ExplainMainQuest(player);
+    
 
+/*
     // Conclusion message
     cout << "\nProfessor Oak: " << player.chosenPokemon.name << " and you, " << player.name << ", are going to be the best of friends!\n";
     cout << "Professor Oak: Your journey begins now! Get ready to explore the vast world of Pokemon!\n";
+*/
 
     return 0;
 }
