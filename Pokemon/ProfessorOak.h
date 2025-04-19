@@ -1,7 +1,6 @@
 #pragma once
 #include "Utility.h"
 #include "Player.h"
-#include "Pokemon.h"
 
 class CProfessorOak
 {

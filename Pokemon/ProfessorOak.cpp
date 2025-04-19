@@ -56,26 +56,28 @@ void CProfessorOak::OfferPokemonChoices(CPlayer& _player)
 // Method to explain quest
 void CProfessorOak::ExplainMainQuest(CPlayer& _player)
 {
-    Utility::WaitForEnter();
+    // Clear the console before explanation
+    Utility::ClearConsole();
+
     cout << name << ": Oak-ay " << _player.name << ", I am about to explain your upcoming grand adventure.\n";
     Utility::WaitForEnter();
     cout << name << ": You see, becoming a Pokemon Master is no easy feat. It takes courage, wisdom, and a bit of luck.\n";
-    cout << name << ": Your mission, should you choose to accept it (and trust me, you really don't have a choice) is to collect all the Pokemon Badges and conquer the Pokemon League.\n\n";
+    cout << name << ": Your mission, should you choose to accept it (and trust me, you really don't have a choice) is to collect all the Pokemon Badges and conquer the Pokemon League.\n";
     Utility::WaitForEnter();
-    cout << _player.name << ": Wait... that sounds a lot like every other Pokemon game out there.\n\n";
+    cout << _player.name << ": Wait... that sounds a lot like every other Pokemon game out there.\n";
     Utility::WaitForEnter();
     cout << name << ": Shhh! Don't break the fourth wall " << _player.name << "! This is serious business.\n";
     Utility::WaitForEnter();
     cout << name << ": To achieve this, you'll need to battle wild Pokemon, challenge gym leaders, and of course, keep your Pokemon healthy at the PokeCenter.\n";
-    cout << name << ": Along the way, you'll capture new Pokemon to strengthen your team. Just remember - there's a limit to how many Pokemon you can carry, so choose wisely!\n\n";
+    cout << name << ": Along the way, you'll capture new Pokemon to strengthen your team. Just remember - there's a limit to how many Pokemon you can carry, so choose wisely!\n";
     Utility::WaitForEnter();
-    cout << _player.name << ": Sounds like a walk in the park... right?\n\n";
+    cout << _player.name << ": Sounds like a walk in the park... right?\n";
     Utility::WaitForEnter();
     cout << name << ": Hah! That's what they all say! But beware, young Trainer, the path to victory is fraught with challenges. And if you lose a battle... well, let's just say you'll be starting from square one.\n";
     Utility::WaitForEnter();
-    cout << name << ": So, what do you say? Are you ready to become the next Pokemon Champion?\n\n";
+    cout << name << ": So, what do you say? Are you ready to become the next Pokemon Champion?\n";
     Utility::WaitForEnter();
-    cout << _player.name << ": Ready as I'll ever be, Professor!\n\n";
+    cout << _player.name << ": Ready as I'll ever be, Professor!\n";
     Utility::WaitForEnter();
     cout << name << ": That's the spirit! Now, your journey begins.\n";
     cout << name << ": But first... Let's just pretend I didn't forget to set up the actual game loop... Ahem, onwards!\n";
@@ -100,7 +102,7 @@ void CProfessorOak::GameLoop(CPlayer& _player)
         cout << "3. Challenge Gyms\n";
         cout << "4. Enter Pokemon League\n";
         cout << "5. Quit\n";
-        cout << "Enter your choice: ";
+        cout << "\nEnter your choice: ";
         cin >> choice;
 
         // Clear the newline character left in the buffer after cin >> choice
@@ -140,5 +142,5 @@ void CProfessorOak::GameLoop(CPlayer& _player)
         // Wait for Enter key before the screen is cleared and the menu is shown again
         Utility::WaitForEnter();
     }
-    cout << "Goodbye, " << _player.name << "! Thanks for playing!\n";
+    cout << "\nGoodbye, " << _player.name << "! Thanks for playing!\n";
 }

@@ -1,23 +1,17 @@
 #include "Pokemon.h"
 
 // Consturctors and Destructor
-CPokemon::CPokemon()
+CPokemon::CPokemon() 
+    : name("Unknown"), type(EPokemonType::EPT_Normal), health(50)
 {
-    name = "Unknown";
-    type = EPokemonType::EPT_Normal;
-    health = 50;
 }
 CPokemon::CPokemon(string _name, EPokemonType _type, int _health)
+    : name(_name), type(_type), health(_health)
 {
-    name = _name;
-    type = _type;
-    health = _health;
 }
 CPokemon::CPokemon(const CPokemon& _other)
+    : name (_other.name), type(_other.type), health(_other.health)
 {
-    name = _other.name;
-    type = _other.type;
-    health = _other.health;
 }
 CPokemon::~CPokemon()
 {
