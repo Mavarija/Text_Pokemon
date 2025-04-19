@@ -1,6 +1,9 @@
 #include <iostream>
 #include <limits>
 #include <string>
+#include "PokemonType.hpp"
+#include "PokemonChoice.hpp"
+
 using namespace std;
 
 // Function to clear the console
@@ -20,24 +23,6 @@ void WaitForEnter()
     // Function that temporarily pauses the program, until the Enter key is pressed.
     cin.get();
 }
-
-// Enums
-enum class EPokemonChoice
-{
-    EPC_Charmander = 1, // start enums from 1 instead of 0. Due to how player choices are made in Oak's intro.
-    EPC_Bulbasaur,
-    EPC_Squirtle,
-    EPC_InvalidChoice
-};
-enum class EPokemonType
-{
-    EPT_Fire,
-    EPT_Grass,
-    EPT_Earth,
-    EPT_Water,
-    EPT_Electric,
-    EPT_Normal
-};
 
 // Pokemon class
 class CPokemon
@@ -292,7 +277,7 @@ int main()
     // Create objects
     CProfessorOak professor("Professor Oak");
     CPokemon charmander("Charmander", EPokemonType::EPT_Fire, 100);
-    CPlayer player("Ash",charmander);
+    CPlayer player("Ash", charmander);
 
     // Greet player, Pokemon choice, main quest, game loop
     professor.GreetPlayer(player);
@@ -303,5 +288,4 @@ int main()
 
 
     return 0;
-
-#include "FileName.hpp"
+}
