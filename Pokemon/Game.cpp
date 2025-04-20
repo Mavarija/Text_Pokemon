@@ -4,7 +4,7 @@
 CGame::CGame()
 {
     // Initializing Grass Struct: environmentType, Pokemon objects, encounterRate.
-    SGrass forestGrass = { "Forest",
+    forestGrass = { "Forest",
         {CPokemon("Pidgey", EPokemonType::EPT_Normal, 40),
          CPokemon("Caterpie", EPokemonType::EPT_Bug, 35),
          CPokemon("Zubat", EPokemonType::EPT_Poison, 30)},

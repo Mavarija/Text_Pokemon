@@ -12,15 +12,6 @@ CWildEncounterManager::CWildEncounterManager()
 // Method to return a randomly selected wild Pokemon
 CPokemon CWildEncounterManager::GetRandomPokemonFromGrass(const SGrass& _grass)
 {
-	// Handle the case when there are no wild Pokémon in the grass (throws an Error otherwise)
-	if (_grass.wildPokemon.empty()) {
-		// Log or display a message to the player
-		// cout << "No wild Pokemon in the grass!\n";
-
-		// Return a default Pokemon
-		return CPokemon();
-	}
-
 	// randomIndex = random valid index to pick a Pokémon from the vector.
 	// The value of RandomIndex is:
 	// divide the random number generated from the size of the vector - wildPokemon, in grass struct.
