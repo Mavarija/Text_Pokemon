@@ -1,5 +1,5 @@
 #include "Game.h"
-#include "Grass.h"
+#include "WildEncounterManager.h"
 
 CGame::CGame()
 {
@@ -35,11 +35,15 @@ void CGame::GameLoop(CPlayer& _player)
         // Clear the newline character left in the buffer after cin >> choice
         Utility::ClearInputBuffer();
 
+        CWildEncounterManager encounterManager;
+        CPokemon encounteredPokemon;
         // Process player choice
         switch (choice)
         {
         case 1: // Battle Wild Pokemon
-            cout << "You look around... but all the wild Pokemon are on vacation. Maybe try again later?\n";
+            encounteredPokemon = encounterManager.GetRandomPokemonFromGrass(forestGrass);
+            cout << "A wild " << encounteredPokemon.name << " appeared!\n";
+            
             break;
         case 2: // Visit PokeCenter
             cout << "You head to the PokeCenter, but Nurse Joy is out on a coffee break. Guess your Pokemon will have to tough it out for now!\n";
