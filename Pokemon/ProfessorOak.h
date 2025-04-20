@@ -17,7 +17,6 @@ public:
 	void OfferPokemonChoices(CPlayer& _player);
 	// Method to explain quest
 	void ExplainMainQuest(CPlayer& _player);
-	// Method to handle main game loop
-	void GameLoop(CPlayer& _player);
+
 };
 
