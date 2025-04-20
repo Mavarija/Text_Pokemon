@@ -5,9 +5,11 @@ enum class EPokemonType
 {
     EPT_Fire,
     EPT_Grass,
-    EPT_Earth,
+    EPT_Rock,
     EPT_Water,
     EPT_Electric,
+    EPT_Poison,
+    EPT_Bug,
     EPT_Normal
 };
 // Pokemon Choice
