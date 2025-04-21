@@ -8,7 +8,7 @@ int main()
 {
     // Create objects
     CProfessorOak professor("Professor Oak");
-    CPokemon charmander("Charmander", EPokemonType::EPT_Fire, 100);
+    CPokemon charmander("Charmander", EPokemonType::EPT_Fire, 100, 10);
     CPlayer player("Ash", charmander);
     CGame game;
 
