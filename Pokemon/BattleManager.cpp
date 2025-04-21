@@ -10,39 +10,60 @@ CBattleManager::CBattleManager()
 // Method to initiate battle
 void CBattleManager::StartBattle(CPlayer& _player, CPokemon& _wildPokemon)
 {
-	cout << "A wild " << _wildPokemon.name << " appeared!\n";
-	Battle(_player.chosenPokemon, _wildPokemon);
+	// Store Pokemon data in the BattleState struct
+	battleState.playerPokemon = &_player.chosenPokemon;
+	battleState.wildPokemon = &_wildPokemon;
+	battleState.playerTurn = true; // player starts first
+	battleState.battleOngoing = true;
+
+	cout << "\nA wild " << _wildPokemon.name << " appeared!\n\n";
+	Battle();
+
 }
 // Method for battle loop
-void CBattleManager::Battle(CPokemon& _playerPokemon, CPokemon _wildPokemon)
+void CBattleManager::Battle()
 {
-	// Check to see if either of the pokemon are awake
-	while (!_playerPokemon.IsFainted() && !_wildPokemon.IsFainted())
+	while (battleState.battleOngoing)
 	{
-		// Player pokemon attacks wild pokemon
-		_playerPokemon.Attack(_wildPokemon);
-		// Check if wild pokemon is awake
-		if (!_wildPokemon.IsFainted())
+		if (battleState.playerTurn)
 		{
-			// Wild pokemon attacks player pokemon
-			_wildPokemon.Attack(_playerPokemon);
+			// Player's turn to attack
+			battleState.wildPokemon->Attack(*battleState.playerPokemon);
 		}
-		// Pause to show the result of each turn
+		// Update the battle state after the turn
+		UpdateBattleState();
+
+		// Switch turns
+		battleState.playerTurn = !battleState.playerTurn;
+
 		Utility::WaitForEnter();
 	}
 
 	// Printing win statements
-	HandleBattleOutcome(_playerPokemon, _playerPokemon.IsFainted());
+	HandleBattleOutcome();
 }
 // Method for batter end
-void CBattleManager::HandleBattleOutcome(CPokemon& _playerPokemon, bool _playerWon)
+void CBattleManager::HandleBattleOutcome()
 {
-	if (_playerWon)
+	if (battleState.playerPokemon->IsFainted())
 	{
-		cout << _playerPokemon.name << " is victorious! Keep an eye on your Pokemon's health.\n";
+		cout << battleState.playerPokemon->name << " has fainted! You lose the battle.\n\n";
 	}
 	else
 	{
-		cout << "Oh no! " << _playerPokemon.name << " fainted! You need to visit the PokeCenter.\n";
+		cout << "You defeated the wild " << battleState.wildPokemon->name << "!\n\n";
+	}
+}
+// Method to update the battle state after each turn
+void CBattleManager::UpdateBattleState()
+{
+	// Check if either pokemon has fainted
+	if (battleState.playerPokemon->IsFainted())
+	{
+		battleState.battleOngoing = false;
+	}
+	else if (battleState.wildPokemon->IsFainted())
+	{
+		battleState.battleOngoing = false;
 	}
 }
