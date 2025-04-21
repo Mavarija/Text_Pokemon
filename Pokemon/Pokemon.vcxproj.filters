@@ -68,5 +68,8 @@
     <ClInclude Include="BattleManager.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="BattleState.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
