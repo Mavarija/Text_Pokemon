@@ -10,11 +10,12 @@ public:
     EPokemonType type;
     int health;
     int maxHealth;
+    int attackPower;
 
     // Default constructor
     CPokemon();
     // Parameterized constructor
-    CPokemon(string _name, EPokemonType _type, int _health);
+    CPokemon(string _name, EPokemonType _type, /*int _health,*/ int _maxHealth, int _attackPower);
     // Copy constructor
     CPokemon(const CPokemon& _other);
     // Destructor
@@ -26,6 +27,8 @@ public:
     void TakeDamage(int _damage);
     // Method to check if health is <= 0
     bool IsFainted();
+    // Method to restore health
+    void Heal();
 
 };
 

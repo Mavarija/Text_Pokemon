@@ -5,9 +5,9 @@ CGame::CGame()
 {
     // Initializing Grass Struct: environmentType, Pokemon objects, encounterRate.
     forestGrass = { "Forest",
-        {CPokemon("Pidgey", EPokemonType::EPT_Normal, 40),
-         CPokemon("Caterpie", EPokemonType::EPT_Bug, 35),
-         CPokemon("Zubat", EPokemonType::EPT_Poison, 30)},
+        {CPokemon("Pidgey", EPokemonType::EPT_Normal, 40, 7),
+         CPokemon("Caterpie", EPokemonType::EPT_Bug, 35, 5),
+         CPokemon("Zubat", EPokemonType::EPT_Poison, 30, 8)},
         70 };
 }
 
@@ -43,10 +43,11 @@ void CGame::GameLoop(CPlayer& _player)
         case 1: // Battle Wild Pokemon
             encounteredPokemon = encounterManager.GetRandomPokemonFromGrass(forestGrass);
             cout << "A wild " << encounteredPokemon.name << " appeared!\n";
-            
             break;
         case 2: // Visit PokeCenter
-            cout << "You head to the PokeCenter, but Nurse Joy is out on a coffee break. Guess your Pokemon will have to tough it out for now!\n";
+            cout << "You head to the PokeCenter.\n";
+            _player.chosenPokemon.Heal();
+            cout << _player.chosenPokemon.name << "'s health is fully restored!\n";
             break;
         case 3: // Challenge Gyms
             cout << "You march up to the Gym, but it's closed for renovations. Seems like even Gym Leaders need a break!\n";
