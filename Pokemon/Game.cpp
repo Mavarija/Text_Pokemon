@@ -1,5 +1,6 @@
 #include "Game.h"
 #include "WildEncounterManager.h"
+#include "BattleManager.h"
 
 CGame::CGame()
 {
@@ -35,27 +36,37 @@ void CGame::GameLoop(CPlayer& _player)
         // Clear the newline character left in the buffer after cin >> choice
         Utility::ClearInputBuffer();
 
+        // Variables for battle loop
         CWildEncounterManager encounterManager;
         CPokemon encounteredPokemon;
-        // Process player choice
+        CBattleManager battleManager;
+
+        // Processing player choice
         switch (choice)
         {
-        case 1: // Battle Wild Pokemon
+        // Battle Wild Pokemon
+        case 1:
+            // Creating a random, wild Pokemon from grass
             encounteredPokemon = encounterManager.GetRandomPokemonFromGrass(forestGrass);
-            cout << "A wild " << encounteredPokemon.name << " appeared!\n";
+            // Starting battle with battle manager
+            battleManager.StartBattle(_player, encounteredPokemon);
             break;
-        case 2: // Visit PokeCenter
+        // Visit PokeCenter
+        case 2:
             cout << "You head to the PokeCenter.\n";
             _player.chosenPokemon.Heal();
             cout << _player.chosenPokemon.name << "'s health is fully restored!\n";
             break;
-        case 3: // Challenge Gyms
+        // Challenge Gyms
+        case 3:
             cout << "You march up to the Gym, but it's closed for renovations. Seems like even Gym Leaders need a break!\n";
             break;
-        case 4: // Enter Pokemon League
+        // Enter Pokemon League
+        case 4:
             cout << "You boldly step towards the Pokemon League... but the gatekeeper laughs and says, 'Maybe next time, champ!'\n";
             break;
-        case 5: // Quit
+        // Quit
+        case 5:
             cout << "You try to quit, but Professor Oak's voice echoes: 'There's no quitting in Pokemon training!'\n";
             cout << "Are you sure you want to quit? (y/n): ";
             // Collecting player input
