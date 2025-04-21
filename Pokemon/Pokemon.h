@@ -9,6 +9,7 @@ public:
     string name;
     EPokemonType type;
     int health;
+    int maxHealth;
 
     // Default constructor
     CPokemon();
@@ -19,7 +20,12 @@ public:
     // Destructor
     ~CPokemon();
 
-    // Method to attack
-    void Attack();
+    // Method to damage target pokemon
+    void Attack(CPokemon& _target);
+    // Method to reduce health
+    void TakeDamage(int _damage);
+    // Method to check if health is <= 0
+    bool IsFainted();
+
 };
 
