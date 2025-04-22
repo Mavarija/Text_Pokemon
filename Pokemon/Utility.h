@@ -1,4 +1,5 @@
 #pragma once
+
 #include <iostream>
 #include <limits>
 using namespace std;
@@ -17,4 +18,3 @@ public:
 //	You can call it using the class name Utility::clearConsole(), without needing to create an instance.
 
 };
-

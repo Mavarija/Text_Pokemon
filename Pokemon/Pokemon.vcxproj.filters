@@ -81,6 +81,18 @@
     <ClCompile Include="Pokemon.cpp">
       <Filter>Source Files\Pokemon</Filter>
     </ClCompile>
+    <ClCompile Include="Pikachu.cpp">
+      <Filter>Source Files\Pokemon\Pokemons</Filter>
+    </ClCompile>
+    <ClCompile Include="Pidgey.cpp">
+      <Filter>Source Files\Pokemon\Pokemons</Filter>
+    </ClCompile>
+    <ClCompile Include="Caterpie.cpp">
+      <Filter>Source Files\Pokemon\Pokemons</Filter>
+    </ClCompile>
+    <ClCompile Include="Zubat.cpp">
+      <Filter>Source Files\Pokemon\Pokemons</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="BattleManager.h">
@@ -112,6 +124,18 @@
     </ClInclude>
     <ClInclude Include="Utility.h">
       <Filter>Header Files\Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="Pikachu.h">
+      <Filter>Header Files\Pokemon\Pokemons</Filter>
+    </ClInclude>
+    <ClInclude Include="Pidgey.h">
+      <Filter>Header Files\Pokemon\Pokemons</Filter>
+    </ClInclude>
+    <ClInclude Include="Caterpie.h">
+      <Filter>Header Files\Pokemon\Pokemons</Filter>
+    </ClInclude>
+    <ClInclude Include="Zubat.h">
+      <Filter>Header Files\Pokemon\Pokemons</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
