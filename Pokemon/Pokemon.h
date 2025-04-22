@@ -5,13 +5,6 @@
 class CPokemon
 {
 public:
-    // Members
-    string name;
-    EPokemonType type;
-    int health;
-    int maxHealth;
-    int attackPower;
-
     // Default constructor
     CPokemon();
     // Parameterized constructor
@@ -30,5 +23,18 @@ public:
     // Method to restore health
     void Heal();
 
+    // Getters
+    int GetHealth();
+    string GetName();
+
+protected:
+    // Members
+    string name;
+    EPokemonType type;
+    int health;
+    int maxHealth;
+    int attackPower;
+
 };
+
 

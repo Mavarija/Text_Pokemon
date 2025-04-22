@@ -8,6 +8,6 @@ CZubat::CZubat()
 
 void CZubat::Supersonic(CPokemon& _target)
 {
-	cout << name << " uses Supersonic on " << _target.name << "!\n";
+	cout << name << " uses Supersonic on " << _target.GetName() << "!\n";
 	_target.TakeDamage(20);
 }

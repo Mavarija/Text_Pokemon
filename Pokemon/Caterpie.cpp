@@ -9,6 +9,6 @@ CCaterpie::CCaterpie()
 // Caterpie method
 void CCaterpie::BugBite(CPokemon& _target)
 {
-	cout << name << " uses Bug Bite on " << _target.name << "!\n";
+	cout << name << " uses Bug Bite on " << _target.GetName() << "!\n";
 	_target.TakeDamage(20);
 }

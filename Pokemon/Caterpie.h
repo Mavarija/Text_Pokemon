@@ -7,6 +7,7 @@ public:
 	// Constructor
 	CCaterpie();
 
+private:
 	// Caterpie method
 	void BugBite(CPokemon& _target);
 };

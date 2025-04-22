@@ -9,6 +9,6 @@ CPikachu::CPikachu()
 // Pikachu method
 void CPikachu::ThunderShock(CPokemon& _target)
 {
-	cout << name << " uses Thunder Shock on " << _target.name << "!\n";
+	cout << name << " uses Thunder Shock on " << _target.GetName() << "!\n";
 	_target.TakeDamage(20);
 }
