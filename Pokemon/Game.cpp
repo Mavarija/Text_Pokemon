@@ -55,7 +55,7 @@ void CGame::GameLoop(CPlayer& _player)
         case 2:
             cout << "You head to the PokeCenter.\n";
             _player.chosenPokemon.Heal();
-            cout << _player.chosenPokemon.name << "'s health is fully restored!\n";
+            cout << _player.chosenPokemon.GetName() << "'s health is fully restored!\n";
             break;
         // Challenge Gyms
         case 3:

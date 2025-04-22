@@ -16,7 +16,7 @@ void CBattleManager::StartBattle(CPlayer& _player, CPokemon& _wildPokemon)
 	battleState.playerTurn = true; // player starts first
 	battleState.battleOngoing = true;
 
-	cout << "\nA wild " << _wildPokemon.name << " appeared!\n\n";
+	cout << "\nA wild " << _wildPokemon.GetName() << " appeared!\n\n";
 	Battle();
 
 }
@@ -47,11 +47,11 @@ void CBattleManager::HandleBattleOutcome()
 {
 	if (battleState.playerPokemon->IsFainted())
 	{
-		cout << battleState.playerPokemon->name << " has fainted! You lose the battle.\n\n";
+		cout << battleState.playerPokemon->GetName() << " has fainted! You lose the battle.\n\n";
 	}
 	else
 	{
-		cout << "You defeated the wild " << battleState.wildPokemon->name << "!\n\n";
+		cout << "You defeated the wild " << battleState.wildPokemon->GetName() << "!\n\n";
 	}
 }
 // Method to update the battle state after each turn

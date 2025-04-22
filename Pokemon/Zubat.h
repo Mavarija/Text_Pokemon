@@ -7,6 +7,7 @@ public:
 	// Constructor
 	CZubat();
 
+private:
 	// Zubat method
 	void Supersonic(CPokemon& _target);
 };

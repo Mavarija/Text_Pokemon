@@ -32,7 +32,7 @@ void CPlayer::ChoosePokemon(int _choice)
         cout << "\nProfessor Oak: Hmm, that doesn't seem right. Why don't I choose for you...\n";
         break;
     }
-    cout << "Player " << name << " chose " << chosenPokemon.name << "!\n";
-    cout << "Professor Oak: " << chosenPokemon.name << " and you, " << name << ", are going to be the best of friends!\n";
+    cout << "Player " << name << " chose " << chosenPokemon.GetName() << "!\n";
+    cout << "Professor Oak: " << chosenPokemon.GetName() << " and you, " << name << ", are going to be the best of friends!\n";
     Utility::WaitForEnter();
 }

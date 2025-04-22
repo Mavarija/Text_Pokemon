@@ -9,6 +9,6 @@ CPidgey::CPidgey()
 // Pidgey method
 void CPidgey::WingAttack(CPokemon& _target)
 {
-	cout << name << " uses Wing Attack on " << _target.name << "!\n";
+	cout << name << " uses Wing Attack on " << _target.GetName() << "!\n";
 	_target.TakeDamage(20);
 }

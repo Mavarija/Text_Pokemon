@@ -7,6 +7,7 @@ public:
 	// Constructor
 	CPikachu();
 
+private:
 	// Pikachu method
 	void ThunderShock(CPokemon& _target);
 

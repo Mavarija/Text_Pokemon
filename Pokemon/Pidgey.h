@@ -7,6 +7,7 @@ public:
 	// Constructor
 	CPidgey();
 
+private:
 	// Pidgey method
 	void WingAttack(CPokemon& _target);
 };

@@ -52,3 +52,13 @@ void CPokemon::Heal()
     // Restore health to full
     health = maxHealth;
 }
+
+// Getters
+int CPokemon::GetHealth()
+{
+    return health;
+}
+string CPokemon::GetName()
+{
+    return name;
+}
