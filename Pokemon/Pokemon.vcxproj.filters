@@ -93,6 +93,15 @@
     <ClCompile Include="Zubat.cpp">
       <Filter>Source Files\Pokemon\Pokemons</Filter>
     </ClCompile>
+    <ClCompile Include="Charmander.cpp">
+      <Filter>Source Files\Pokemon\Pokemons</Filter>
+    </ClCompile>
+    <ClCompile Include="Bulbasaur.cpp">
+      <Filter>Source Files\Pokemon\Pokemons</Filter>
+    </ClCompile>
+    <ClCompile Include="Squirtle.cpp">
+      <Filter>Source Files\Pokemon\Pokemons</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="BattleManager.h">
@@ -135,6 +144,15 @@
       <Filter>Header Files\Pokemon\Pokemons</Filter>
     </ClInclude>
     <ClInclude Include="Zubat.h">
+      <Filter>Header Files\Pokemon\Pokemons</Filter>
+    </ClInclude>
+    <ClInclude Include="Charmander.h">
+      <Filter>Header Files\Pokemon\Pokemons</Filter>
+    </ClInclude>
+    <ClInclude Include="Bulbasaur.h">
+      <Filter>Header Files\Pokemon\Pokemons</Filter>
+    </ClInclude>
+    <ClInclude Include="Squirtle.h">
       <Filter>Header Files\Pokemon\Pokemons</Filter>
     </ClInclude>
   </ItemGroup>

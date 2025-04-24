@@ -7,16 +7,21 @@
 int main()
 {
     // Create objects
-    CProfessorOak professor("Professor Oak");
+    CProfessorOak* professor = new CProfessorOak("Professor Oak");
     CPokemon charmander("Charmander", EPokemonType::EPT_Fire, 100, 10);
-    CPlayer player("Ash", charmander);
-    CGame game;
+    CPlayer* player = new CPlayer("Ash", charmander);
+    CGame* game = new CGame;
 
     // Greet player, Pokemon choice, main quest, game loop
-    professor.GreetPlayer(player);
-    professor.OfferPokemonChoices(player);
-    professor.ExplainMainQuest(player);
-    game.GameLoop(player);
+    professor->GreetPlayer(*player);
+    professor->OfferPokemonChoices(*player);
+    professor->ExplainMainQuest(*player);
+    game->GameLoop(*player);
+
+    // Clean up memory
+    delete(professor);
+    delete(player);
+    delete(game);
 
     return 0;
 }
