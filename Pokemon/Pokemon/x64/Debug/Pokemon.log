@@ -1,6 +1,4 @@
-﻿  Player.cpp
-  Pokemon.cpp
-  Zubat.cpp
+﻿  BattleManager.cpp
+  main.cpp
   Generating Code...
-C:\Users\marij\source\repos\Mavarija\Text_Pokemon\Pokemon\Pokemon.cpp(48,1): warning C4715: 'CPokemon::IsFainted': not all control paths return a value
   Pokemon.vcxproj -> C:\Users\marij\source\repos\Mavarija\Text_Pokemon\Pokemon\x64\Debug\Pokemon.exe
