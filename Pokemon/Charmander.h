@@ -8,7 +8,9 @@ public:
 
 private:
 	// Charmander method
-	void FlameBurst(CPokemon& _target);
+	void FlameBurst(CPokemon* _target);
 
+	// Base class attack method override
+	void Attack(CPokemon* _target);
 };
 

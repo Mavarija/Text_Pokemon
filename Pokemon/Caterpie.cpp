@@ -7,8 +7,14 @@ CCaterpie::CCaterpie()
 }
 
 // Caterpie method
-void CCaterpie::BugBite(CPokemon& _target)
+void CCaterpie::BugBite(CPokemon* _target)
 {
-	cout << name << " uses Bug Bite on " << _target.GetName() << "!\n";
-	_target.TakeDamage(20);
+	cout << name << " uses Bug Bite on " << _target->GetName() << "!\n";
+	_target->TakeDamage(20);
+}
+
+// Base class attack method override
+void CCaterpie::Attack(CPokemon* _target)
+{
+	BugBite(_target);
 }

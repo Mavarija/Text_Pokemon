@@ -22,4 +22,3 @@ private:
 	// Method to update the battle state after each turn
 	void UpdateBattleState();
 };
-

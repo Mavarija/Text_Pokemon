@@ -7,8 +7,14 @@ CCharmander::CCharmander()
 }
 
 // Charmander method
-void CCharmander::FlameBurst(CPokemon& _target)
+void CCharmander::FlameBurst(CPokemon* _target)
 {
-	cout << name << " uses Flame Burst on " << _target.GetName() << "!\n";
-	_target.TakeDamage(20);
+	cout << name << " uses Flame Burst on " << _target->GetName() << "!\n";
+	_target->TakeDamage(20);
+}
+
+// Base class attack method override
+void CCharmander::Attack(CPokemon* _target)
+{
+	FlameBurst(_target);
 }

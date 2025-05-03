@@ -9,6 +9,9 @@ public:
 
 private:
 	// Zubat method
-	void Supersonic(CPokemon& _target);
+	void Supersonic(CPokemon* _target);
+
+	// Base class attack method override
+	void Attack(CPokemon* _target);
 };
 

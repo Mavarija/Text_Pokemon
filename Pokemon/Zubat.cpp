@@ -6,8 +6,15 @@ CZubat::CZubat()
 {
 }
 
-void CZubat::Supersonic(CPokemon& _target)
+// Zubat method
+void CZubat::Supersonic(CPokemon* _target)
 {
-	cout << name << " uses Supersonic on " << _target.GetName() << "!\n";
-	_target.TakeDamage(20);
+	cout << name << " uses Supersonic on " << _target->GetName() << "!\n";
+	_target->TakeDamage(20);
+}
+
+// Base class attack method override
+void CZubat::Attack(CPokemon* _target)
+{
+	Supersonic(_target);
 }

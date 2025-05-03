@@ -8,7 +8,10 @@ public:
 
 private:
 	// Squirtle method
-	void WaterSplash(CPokemon& _target);
+	void WaterSplash(CPokemon* _target);
+
+	// Base class attack method override
+	void Attack(CPokemon* _target);
 
 };
 

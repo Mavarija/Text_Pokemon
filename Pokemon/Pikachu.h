@@ -9,7 +9,9 @@ public:
 
 private:
 	// Pikachu method
-	void ThunderShock(CPokemon& _target);
+	void ThunderShock(CPokemon* _target);
 
+	// Base class attack method override
+	void Attack(CPokemon* _target);
 };
 
