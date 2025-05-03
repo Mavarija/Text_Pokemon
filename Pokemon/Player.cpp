@@ -1,15 +1,16 @@
 #include "Player.h"
+#include "Charmander.h"
+#include "Bulbasaur.h"
+#include "Squirtle.h"
 
 // Constructors
 CPlayer::CPlayer()
 {
     name = "Trainer";
-    chosenPokemon = CPokemon(); // uses default CPokemon constructor
 }
-CPlayer::CPlayer(string _name, CPokemon _chosenPokemon)
+CPlayer::CPlayer(string _name)
 {
     name = _name;
-    chosenPokemon = _chosenPokemon;
 }
 
 // Method to choose a Pokemon
@@ -19,20 +20,20 @@ void CPlayer::ChoosePokemon(int _choice)
     switch ((EPokemonChoice)_choice) // modern C++ way: switch(static_cast<EPokemonChoice>(_choice)).
     {
     case EPokemonChoice::EPC_Charmander:
-        chosenPokemon = CPokemon("Charmander", EPokemonType::EPT_Fire, 100, 10); // initializing CPlayer's chosenPokemon with CPokemon's custom constructor.
+        chosenPokemon = new CCharmander();
         break;
     case EPokemonChoice::EPC_Bulbasaur:
-        chosenPokemon = CPokemon("Bulbasaur", EPokemonType::EPT_Grass, 100, 8);
+        chosenPokemon = new CBulbasaur();
         break;
     case EPokemonChoice::EPC_Squirtle:
-        chosenPokemon = CPokemon("Squirtle", EPokemonType::EPT_Water, 100, 9);
+        chosenPokemon = new CSquirtle();
         break;
     default:
-        chosenPokemon = CPokemon("Charmander", EPokemonType::EPT_Fire, 100, 10);
+        chosenPokemon = new CCharmander();
         cout << "\nProfessor Oak: Hmm, that doesn't seem right. Why don't I choose for you...\n";
         break;
     }
-    cout << "Player " << name << " chose " << chosenPokemon.GetName() << "!\n";
-    cout << "Professor Oak: " << chosenPokemon.GetName() << " and you, " << name << ", are going to be the best of friends!\n";
+    cout << "Player " << name << " chose " << chosenPokemon->GetName() << "!\n";
+    cout << "Professor Oak: " << chosenPokemon->GetName() << " and you, " << name << ", are going to be the best of friends!\n";
     Utility::WaitForEnter();
 }

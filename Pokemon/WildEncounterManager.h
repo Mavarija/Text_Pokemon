@@ -8,6 +8,6 @@ public:
 	CWildEncounterManager();
 
 	// Method to return a randomly selected wild Pokemon
-	CPokemon GetRandomPokemonFromGrass(const SGrass& _grass);
+	CPokemon* GetRandomPokemonFromGrass(const SGrass& _grass);
 };
 

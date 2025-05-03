@@ -6,12 +6,12 @@ class CPlayer
 public:
     // Members
     string name;
-    CPokemon chosenPokemon;
+    CPokemon* chosenPokemon;
 
     // Default constructor
     CPlayer();
     // Parameterized constructor
-    CPlayer(string _name, CPokemon _chosenPokemon);
+    CPlayer(string _name);
 
     // Method to choose a Pokemon
     void ChoosePokemon(int _choice);

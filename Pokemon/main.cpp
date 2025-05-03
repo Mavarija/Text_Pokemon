@@ -8,15 +8,14 @@ int main()
 {
     // Create objects
     CProfessorOak* professor = new CProfessorOak("Professor Oak");
-    CPokemon charmander("Charmander", EPokemonType::EPT_Fire, 100, 10);
-    CPlayer* player = new CPlayer("Ash", charmander);
-    CGame* game = new CGame;
+    CPlayer* player = new CPlayer();
+    CGame* game = new CGame();
 
     // Greet player, Pokemon choice, main quest, game loop
     professor->GreetPlayer(*player);
     professor->OfferPokemonChoices(*player);
     professor->ExplainMainQuest(*player);
-    game->GameLoop(*player);
+    game->GameLoop(player);
 
     // Clean up memory
     delete(professor);

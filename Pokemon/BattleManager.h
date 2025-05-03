@@ -10,7 +10,7 @@ public:
 	CBattleManager();
 	
 	// Method to initiate battle
-	void StartBattle(CPlayer& _player, CPokemon& _wildPokemon);
+	void StartBattle(CPlayer* _player, CPokemon* _wildPokemon);
 private:
 	// Battle state object to track the battle
 	SBattleState battleState;
