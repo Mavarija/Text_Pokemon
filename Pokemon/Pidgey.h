@@ -9,6 +9,9 @@ public:
 
 private:
 	// Pidgey method
-	void WingAttack(CPokemon& _target);
+	void WingAttack(CPokemon* _target);
+
+	// Base class attack method override
+	void Attack(CPokemon* _target);
 };
 

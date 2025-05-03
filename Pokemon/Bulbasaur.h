@@ -9,7 +9,10 @@ public:
 
 private:
 	// Bulbasaur method
-	void WineWhip(CPokemon& _target);
+	void WineWhip(CPokemon* _target);
+
+	// Base class attack method override
+	void Attack(CPokemon* _target);
 
 };
 

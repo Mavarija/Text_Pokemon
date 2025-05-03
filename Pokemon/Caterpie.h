@@ -9,6 +9,9 @@ public:
 
 private:
 	// Caterpie method
-	void BugBite(CPokemon& _target);
+	void BugBite(CPokemon* _target);
+
+	// Base class attack method override
+	void Attack(CPokemon* _target);
 };
 

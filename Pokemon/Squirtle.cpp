@@ -7,8 +7,14 @@ CSquirtle::CSquirtle()
 }
 
 // Squirtle method
-void CSquirtle::WaterSplash(CPokemon& _target)
+void CSquirtle::WaterSplash(CPokemon* _target)
 {
-	cout << name << " uses Water Splash on " << _target.GetName() << "!\n";
-	_target.TakeDamage(20);
+	cout << name << " uses Water Splash on " << _target->GetName() << "!\n";
+	_target->TakeDamage(20);
+}
+
+// Base class attack method override
+void CSquirtle::Attack(CPokemon* _target)
+{
+	WaterSplash(_target);
 }

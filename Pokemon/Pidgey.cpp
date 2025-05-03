@@ -7,8 +7,14 @@ CPidgey::CPidgey()
 }
 
 // Pidgey method
-void CPidgey::WingAttack(CPokemon& _target)
+void CPidgey::WingAttack(CPokemon* _target)
 {
-	cout << name << " uses Wing Attack on " << _target.GetName() << "!\n";
-	_target.TakeDamage(20);
+	cout << name << " uses Wing Attack on " << _target->GetName() << "!\n";
+	_target->TakeDamage(20);
+}
+
+// Base class attack method override
+void CPidgey::Attack(CPokemon* _target)
+{
+	WingAttack(_target);
 }
