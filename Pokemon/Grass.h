@@ -7,6 +7,6 @@ struct SGrass
 {
 	// Members
 	string enviromentType; // Eg.: river, cave, forest.
-	vector<CPokemon> wildPokemon; // List of pokemon
+	vector<CPokemon*> wildPokemonList; // List of pokemon
 	int encounterRate{};	// out of 100%
 };

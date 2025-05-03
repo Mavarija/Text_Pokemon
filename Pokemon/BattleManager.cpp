@@ -8,15 +8,15 @@ CBattleManager::CBattleManager()
 }
 
 // Method to initiate battle
-void CBattleManager::StartBattle(CPlayer& _player, CPokemon& _wildPokemon)
+void CBattleManager::StartBattle(CPlayer* _player, CPokemon* _wildPokemon)
 {
 	// Store Pokemon data in the BattleState struct
-	battleState.playerPokemon = &_player.chosenPokemon;
-	battleState.wildPokemon = &_wildPokemon;
+	battleState.playerPokemon = _player->chosenPokemon;
+	battleState.wildPokemon = _wildPokemon;
 	battleState.playerTurn = true; // player starts first
 	battleState.battleOngoing = true;
 
-	cout << "\nA wild " << _wildPokemon.GetName() << " appeared!\n\n";
+	cout << "\nA wild " << _wildPokemon->GetName() << " appeared!\n\n";
 	Battle();
 
 }
@@ -28,7 +28,7 @@ void CBattleManager::Battle()
 		if (battleState.playerTurn)
 		{
 			// Player's turn to attack
-			battleState.wildPokemon->Attack(*battleState.playerPokemon);
+			battleState.wildPokemon->Attack(battleState.playerPokemon);
 		}
 		// Update the battle state after the turn
 		UpdateBattleState();

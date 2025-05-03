@@ -1,30 +1,37 @@
 #include "Game.h"
 #include "WildEncounterManager.h"
 #include "BattleManager.h"
+#include "Pidgey.h"
+#include "Caterpie.h"
+#include "Zubat.h"
 
 CGame::CGame()
 {
-    // Initializing Grass Struct: environmentType, Pokemon objects, encounterRate.
-    forestGrass = { "Forest",
-        {CPokemon("Pidgey", EPokemonType::EPT_Normal, 40, 7),
-         CPokemon("Caterpie", EPokemonType::EPT_Bug, 35, 5),
-         CPokemon("Zubat", EPokemonType::EPT_Poison, 30, 8)},
-        70 };
+    // Initializing Grass Struct with pokemon objects
+    forestGrass = { "Forest", {new CPidgey(), new CCaterpie(), new CZubat()}, 70};
+}
+CGame::~CGame()
+{
+    delete (wildPokemon);
 }
 
 // Method to handle main game loop
-void CGame::GameLoop(CPlayer& _player)
+void CGame::GameLoop(CPlayer* _player)
 {
     bool keepPlaying = true;
     int choice;
 
+    // Variables for battle loop
+    CBattleManager* battleManager = new CBattleManager();
+    CWildEncounterManager* encounterManager = new CWildEncounterManager();
+    
     while (keepPlaying)
     {
         // Clear console before showing options
         Utility::ClearConsole();
 
         // Display options
-        cout << "\nWhat would you like to do next, " << _player.name << "?\n\n";
+        cout << "\nWhat would you like to do next, " << _player->name << "?\n\n";
         cout << "1. Battle Wild Pokemon\n";
         cout << "2. Visit PokeCenter\n";
         cout << "3. Challenge Gyms\n";
@@ -36,10 +43,6 @@ void CGame::GameLoop(CPlayer& _player)
         // Clear the newline character left in the buffer after cin >> choice
         Utility::ClearInputBuffer();
 
-        // Variables for battle loop
-        CWildEncounterManager encounterManager;
-        CPokemon encounteredPokemon;
-        CBattleManager battleManager;
 
         // Processing player choice
         switch (choice)
@@ -47,15 +50,13 @@ void CGame::GameLoop(CPlayer& _player)
         // Battle Wild Pokemon
         case 1:
             // Creating a random, wild Pokemon from grass
-            encounteredPokemon = encounterManager.GetRandomPokemonFromGrass(forestGrass);
+            wildPokemon = encounterManager->GetRandomPokemonFromGrass(forestGrass);
             // Starting battle with battle manager
-            battleManager.StartBattle(_player, encounteredPokemon);
+            battleManager->StartBattle(_player, wildPokemon);
             break;
         // Visit PokeCenter
         case 2:
-            cout << "You head to the PokeCenter.\n";
-            _player.chosenPokemon.Heal();
-            cout << _player.chosenPokemon.GetName() << "'s health is fully restored!\n";
+            VisitPokeCenter(_player);
             break;
         // Challenge Gyms
         case 3:
@@ -85,5 +86,10 @@ void CGame::GameLoop(CPlayer& _player)
         // Wait for Enter key before the screen is cleared and the menu is shown again
         Utility::WaitForEnter();
     }
-    cout << "\nGoodbye, " << _player.name << "! Thanks for playing!\n";
+    cout << "\nGoodbye, " << _player->name << "! Thanks for playing!\n";
+}
+
+void CGame::VisitPokeCenter(CPlayer* _player)
+{
+
 }
