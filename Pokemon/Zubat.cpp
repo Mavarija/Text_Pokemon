@@ -2,7 +2,8 @@
 
 // Constructor initialized with CPokemon custom constructor
 CZubat::CZubat()
-	: CPokemon("Zubat", EPokemonType::EPT_Poison, 100, 20)
+	: CPokemon("Zubat", EPokemonType::EPT_Poison, 100, 20,
+		{SMove("Supersonic", 25), SMove("LEECH LIFE", 10)})
 {
 }
 
@@ -28,7 +29,24 @@ void CZubat::Supersonic(CPokemon* _target)
 }
 
 // Base class attack method override
-void CZubat::Attack(CPokemon* _target)
+void CZubat::Attack(SMove _selectedMove, CPokemon* _target)
 {
+	CPokemon::Attack(_selectedMove, _target);
+
+	if (_selectedMove.name == "LEECH LIFE")
+	{
+		// Restore 50% of the damage dealt
+		this->health += _selectedMove.power * 0.5;
+
+		// Ensure health does not exceed maxHealth
+		if (this->health > this->maxHealth)
+		{
+			this->health = this->maxHealth;
+		}
+		std::cout << "... and regained health!\n";
+	}
+/*
+	SelectAndUseMove(_target);
 	Supersonic(_target);
+*/
 }

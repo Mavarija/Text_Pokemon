@@ -20,6 +20,12 @@ void CBattleManager::StartBattle(CPlayer* _player, CPokemon* _wildPokemon)
 	Battle();
 
 }
+
+void CBattleManager::StopBattle()
+{
+	battleState.battleOngoing = false;
+}
+
 // Method for battle loop
 void CBattleManager::Battle()
 {
@@ -28,7 +34,7 @@ void CBattleManager::Battle()
 		if (battleState.playerTurn)
 		{
 			// Player's turn to attack
-			battleState.wildPokemon->Attack(battleState.playerPokemon);
+			battleState.wildPokemon->SelectAndUseMove(battleState.playerPokemon);
 		}
 		// Update the battle state after the turn
 		UpdateBattleState();

@@ -2,7 +2,8 @@
 
 // Constructor - initialized with CPokemon custom constructor
 CPikachu::CPikachu()
-	: CPokemon("Pikachu", EPokemonType::EPT_Electric, 100, 20)
+	: CPokemon("Pikachu", EPokemonType::EPT_Electric, 100, 20,
+		{SMove("THUNDER SHOCK", 25), SMove("THUNDER BOLT", 80)})
 {
 }
 
@@ -28,7 +29,27 @@ void CPikachu::ThunderShock(CPokemon* _target)
 }
 
 
-void CPikachu::Attack(CPokemon* _target)
+void CPikachu::Attack(SMove _selectedMove, CPokemon* _target)
 {
+	if (_selectedMove.name == "THUNDER BOLT")
+	{
+		// 80% chance to hit
+		if (rand() % 100 < 80)
+		{
+			CPokemon::Attack(_selectedMove, _target);
+			std::cout << "... and it hit succesfully!\n";
+		}
+		else
+		{
+			std::cout << "... but it missed!\n";
+		}
+	}
+	else
+	{
+		CPokemon::Attack(_selectedMove, _target);
+	}
+/*
+	SelectAndUseMove(_target);
 	ThunderShock(_target);
+*/
 }

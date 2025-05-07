@@ -2,7 +2,8 @@
 
 // Constructor initialized with CPokemon custom constructor
 CCaterpie::CCaterpie()
-	: CPokemon("Caterpie", EPokemonType::EPT_Bug, 100, 10)
+	: CPokemon("Caterpie", EPokemonType::EPT_Bug, 100, 10,
+		{SMove("BUG BITE", 25), SMove("STICKY WEB", 10)})
 {
 }
 
@@ -29,7 +30,19 @@ void CCaterpie::BugBite(CPokemon* _target)
 }
 
 // Base class attack method override
-void CCaterpie::Attack(CPokemon* _target)
+void CCaterpie::Attack(SMove _selectedMove, CPokemon* _target)
 {
+	CPokemon::Attack(_selectedMove, _target);
+
+	if (_selectedMove.name == "STICKY WEB")
+	{
+		// Reduce the target's next attack damage (for simplicity, reducing by a fixed val)
+		int reducedDamage = 5;
+		_target->ReduceAttackPower(reducedDamage);
+		std::cout << _target->GetName() << "'s next attack will be reduced by " << reducedDamage << " damage!\n";
+	}
+/*
+	SelectAndUseMove(_target);
 	BugBite(_target);
+*/
 }

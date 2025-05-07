@@ -11,9 +11,11 @@ public:
 	
 	// Method to initiate battle
 	void StartBattle(CPlayer* _player, CPokemon* _wildPokemon);
+	// Method to end battle
+	static void StopBattle();
 private:
 	// Battle state object to track the battle
-	SBattleState battleState;
+	static SBattleState battleState;
 
 	// Method for battle loop
 	void Battle();

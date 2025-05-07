@@ -12,6 +12,6 @@ private:
 	void ThunderShock(CPokemon* _target);
 
 	// Base class attack method override
-	void Attack(CPokemon* _target);
+	void Attack(SMove _selectedMove, CPokemon* _target) override;
 };
 
