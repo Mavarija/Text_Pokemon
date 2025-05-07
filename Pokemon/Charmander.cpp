@@ -2,7 +2,8 @@
 
 // Constructor initialized with CPokemon custom constructor
 CCharmander::CCharmander()
-	: CPokemon("Charmander", EPokemonType::EPT_Fire, 100, 35)
+	: CPokemon("Charmander", EPokemonType::EPT_Fire, 100, 35,
+		{SMove("FLAME BURST", 25), SMove("BLAZING CHARGE", 70)})
 {
 }
 
@@ -28,7 +29,19 @@ void CCharmander::FlameBurst(CPokemon* _target)
 }
 
 // Base class attack method override
-void CCharmander::Attack(CPokemon* _target)
+void CCharmander::Attack(SMove _selectedMove, CPokemon* _target)
 {
+	CPokemon::Attack(_selectedMove, _target);
+
+	if (_selectedMove.name == "BLAZING CHARGE")
+	{
+		// Recoil effect: Charmanfer takes recoil damage
+		this->TakeDamage(10);
+		std::cout << name << " takes 10 recoil damage from the Blazing Charge!\n";
+		Utility::WaitForEnter();
+	}
+/*
+	SelectAndUseMove(_target);
 	FlameBurst(_target);
+*/
 }

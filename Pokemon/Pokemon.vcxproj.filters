@@ -155,5 +155,8 @@
     <ClInclude Include="Squirtle.h">
       <Filter>Header Files\Pokemon\Pokemons</Filter>
     </ClInclude>
+    <ClInclude Include="Move.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
