@@ -55,6 +55,9 @@
     <Filter Include="Source Files\Pokemon\Pokemons">
       <UniqueIdentifier>{79df1ac3-e7c9-4d4c-a784-5161eeeb0459}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\Pokemon\Pokemons\StatusEffects">
+      <UniqueIdentifier>{7f1ffd2c-811d-4427-a8d7-ac96fd405c8f}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -157,6 +160,9 @@
     </ClInclude>
     <ClInclude Include="Move.h">
       <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="IStatusEffect.h">
+      <Filter>Header Files\Pokemon\Pokemons\StatusEffects</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
