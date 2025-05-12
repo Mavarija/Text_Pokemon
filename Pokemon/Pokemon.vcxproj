@@ -184,6 +184,7 @@
     <ClInclude Include="Charmander.h" />
     <ClInclude Include="Game.h" />
     <ClInclude Include="Grass.h" />
+    <ClInclude Include="IStatusEffect.h" />
     <ClInclude Include="Move.h" />
     <ClInclude Include="Pidgey.h" />
     <ClInclude Include="Pikachu.h" />
