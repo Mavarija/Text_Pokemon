@@ -58,6 +58,9 @@
     <Filter Include="Header Files\Pokemon\Pokemons\StatusEffects">
       <UniqueIdentifier>{7f1ffd2c-811d-4427-a8d7-ac96fd405c8f}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\Pokemon\Pokemons\StatusEffects">
+      <UniqueIdentifier>{ca9a1396-f0fa-4596-81e3-a13265c45603}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -104,6 +107,9 @@
     </ClCompile>
     <ClCompile Include="Squirtle.cpp">
       <Filter>Source Files\Pokemon\Pokemons</Filter>
+    </ClCompile>
+    <ClCompile Include="ParalyzedEffect.cpp">
+      <Filter>Source Files\Pokemon\Pokemons\StatusEffects</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -158,11 +164,14 @@
     <ClInclude Include="Squirtle.h">
       <Filter>Header Files\Pokemon\Pokemons</Filter>
     </ClInclude>
-    <ClInclude Include="Move.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="IStatusEffect.h">
       <Filter>Header Files\Pokemon\Pokemons\StatusEffects</Filter>
+    </ClInclude>
+    <ClInclude Include="ParalyzedEffect.h">
+      <Filter>Header Files\Pokemon\Pokemons\StatusEffects</Filter>
+    </ClInclude>
+    <ClInclude Include="Move.h">
+      <Filter>Header Files\Pokemon</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
