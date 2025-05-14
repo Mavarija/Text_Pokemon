@@ -1,22 +1,291 @@
 ﻿  BattleManager.cpp
+C:\Users\marij\source\repos\Mavarija\Text_Pokemon\Pokemon\IStatusEffect.h(9,27): error C2061: syntax error: identifier 'CPokemon'
   Bulbasaur.cpp
+  (compiling source file 'BattleManager.cpp')
+  
+C:\Users\marij\source\repos\Mavarija\Text_Pokemon\Pokemon\IStatusEffect.h(16,29): error C2061: syntax error: identifier 'CPokemon'
+  (compiling source file 'BattleManager.cpp')
+  
+C:\Users\marij\source\repos\Mavarija\Text_Pokemon\Pokemon\IStatusEffect.h(19,27): error C2061: syntax error: identifier 'CPokemon'
+  (compiling source file 'BattleManager.cpp')
+  
+C:\Users\marij\source\repos\Mavarija\Text_Pokemon\Pokemon\ParalyzedEffect.h(8,19): error C2061: syntax error: identifier 'CPokemon'
+  (compiling source file 'BattleManager.cpp')
+  
+C:\Users\marij\source\repos\Mavarija\Text_Pokemon\Pokemon\ParalyzedEffect.h(10,21): error C2061: syntax error: identifier 'CPokemon'
+  (compiling source file 'BattleManager.cpp')
+  
+C:\Users\marij\source\repos\Mavarija\Text_Pokemon\Pokemon\ParalyzedEffect.h(11,19): error C2061: syntax error: identifier 'CPokemon'
+  (compiling source file 'BattleManager.cpp')
+  
+C:\Users\marij\source\repos\Mavarija\Text_Pokemon\Pokemon\IStatusEffect.h(9,27): error C2061: syntax error: identifier 'CPokemon'
+  (compiling source file 'Bulbasaur.cpp')
+  
+C:\Users\marij\source\repos\Mavarija\Text_Pokemon\Pokemon\IStatusEffect.h(16,29): error C2061: syntax error: identifier 'CPokemon'
+  (compiling source file 'Bulbasaur.cpp')
+  
+C:\Users\marij\source\repos\Mavarija\Text_Pokemon\Pokemon\IStatusEffect.h(19,27): error C2061: syntax error: identifier 'CPokemon'
+  (compiling source file 'Bulbasaur.cpp')
+  
+C:\Users\marij\source\repos\Mavarija\Text_Pokemon\Pokemon\ParalyzedEffect.h(8,19): error C2061: syntax error: identifier 'CPokemon'
+  (compiling source file 'Bulbasaur.cpp')
+  
+C:\Users\marij\source\repos\Mavarija\Text_Pokemon\Pokemon\ParalyzedEffect.h(10,21): error C2061: syntax error: identifier 'CPokemon'
+  (compiling source file 'Bulbasaur.cpp')
+  
+C:\Users\marij\source\repos\Mavarija\Text_Pokemon\Pokemon\ParalyzedEffect.h(11,19): error C2061: syntax error: identifier 'CPokemon'
+  (compiling source file 'Bulbasaur.cpp')
+  
   Caterpie.cpp
+C:\Users\marij\source\repos\Mavarija\Text_Pokemon\Pokemon\IStatusEffect.h(9,27): error C2061: syntax error: identifier 'CPokemon'
+  (compiling source file 'Caterpie.cpp')
+  
+C:\Users\marij\source\repos\Mavarija\Text_Pokemon\Pokemon\IStatusEffect.h(16,29): error C2061: syntax error: identifier 'CPokemon'
+  (compiling source file 'Caterpie.cpp')
+  
+C:\Users\marij\source\repos\Mavarija\Text_Pokemon\Pokemon\IStatusEffect.h(19,27): error C2061: syntax error: identifier 'CPokemon'
+  (compiling source file 'Caterpie.cpp')
+  
+C:\Users\marij\source\repos\Mavarija\Text_Pokemon\Pokemon\ParalyzedEffect.h(8,19): error C2061: syntax error: identifier 'CPokemon'
+  (compiling source file 'Caterpie.cpp')
+  
+C:\Users\marij\source\repos\Mavarija\Text_Pokemon\Pokemon\ParalyzedEffect.h(10,21): error C2061: syntax error: identifier 'CPokemon'
+  (compiling source file 'Caterpie.cpp')
+  
+C:\Users\marij\source\repos\Mavarija\Text_Pokemon\Pokemon\ParalyzedEffect.h(11,19): error C2061: syntax error: identifier 'CPokemon'
+  (compiling source file 'Caterpie.cpp')
+  
   Charmander.cpp
+C:\Users\marij\source\repos\Mavarija\Text_Pokemon\Pokemon\IStatusEffect.h(9,27): error C2061: syntax error: identifier 'CPokemon'
+  (compiling source file 'Charmander.cpp')
+  
+C:\Users\marij\source\repos\Mavarija\Text_Pokemon\Pokemon\IStatusEffect.h(16,29): error C2061: syntax error: identifier 'CPokemon'
+  (compiling source file 'Charmander.cpp')
+  
+C:\Users\marij\source\repos\Mavarija\Text_Pokemon\Pokemon\IStatusEffect.h(19,27): error C2061: syntax error: identifier 'CPokemon'
+  (compiling source file 'Charmander.cpp')
+  
+C:\Users\marij\source\repos\Mavarija\Text_Pokemon\Pokemon\ParalyzedEffect.h(8,19): error C2061: syntax error: identifier 'CPokemon'
+  (compiling source file 'Charmander.cpp')
+  
+C:\Users\marij\source\repos\Mavarija\Text_Pokemon\Pokemon\ParalyzedEffect.h(10,21): error C2061: syntax error: identifier 'CPokemon'
+  (compiling source file 'Charmander.cpp')
+  
+C:\Users\marij\source\repos\Mavarija\Text_Pokemon\Pokemon\ParalyzedEffect.h(11,19): error C2061: syntax error: identifier 'CPokemon'
+  (compiling source file 'Charmander.cpp')
+  
   Game.cpp
+C:\Users\marij\source\repos\Mavarija\Text_Pokemon\Pokemon\IStatusEffect.h(9,27): error C2061: syntax error: identifier 'CPokemon'
+  (compiling source file 'Game.cpp')
+  
+C:\Users\marij\source\repos\Mavarija\Text_Pokemon\Pokemon\IStatusEffect.h(16,29): error C2061: syntax error: identifier 'CPokemon'
+  (compiling source file 'Game.cpp')
+  
+C:\Users\marij\source\repos\Mavarija\Text_Pokemon\Pokemon\IStatusEffect.h(19,27): error C2061: syntax error: identifier 'CPokemon'
+  (compiling source file 'Game.cpp')
+  
+C:\Users\marij\source\repos\Mavarija\Text_Pokemon\Pokemon\ParalyzedEffect.h(8,19): error C2061: syntax error: identifier 'CPokemon'
+  (compiling source file 'Game.cpp')
+  
+C:\Users\marij\source\repos\Mavarija\Text_Pokemon\Pokemon\ParalyzedEffect.h(10,21): error C2061: syntax error: identifier 'CPokemon'
+  (compiling source file 'Game.cpp')
+  
+C:\Users\marij\source\repos\Mavarija\Text_Pokemon\Pokemon\ParalyzedEffect.h(11,19): error C2061: syntax error: identifier 'CPokemon'
+  (compiling source file 'Game.cpp')
+  
+  main.cpp
+C:\Users\marij\source\repos\Mavarija\Text_Pokemon\Pokemon\IStatusEffect.h(9,27): error C2061: syntax error: identifier 'CPokemon'
+  (compiling source file 'main.cpp')
+  
+C:\Users\marij\source\repos\Mavarija\Text_Pokemon\Pokemon\IStatusEffect.h(16,29): error C2061: syntax error: identifier 'CPokemon'
+  (compiling source file 'main.cpp')
+  
+C:\Users\marij\source\repos\Mavarija\Text_Pokemon\Pokemon\IStatusEffect.h(19,27): error C2061: syntax error: identifier 'CPokemon'
+  (compiling source file 'main.cpp')
+  
+C:\Users\marij\source\repos\Mavarija\Text_Pokemon\Pokemon\ParalyzedEffect.h(8,19): error C2061: syntax error: identifier 'CPokemon'
+  (compiling source file 'main.cpp')
+  
+C:\Users\marij\source\repos\Mavarija\Text_Pokemon\Pokemon\ParalyzedEffect.h(10,21): error C2061: syntax error: identifier 'CPokemon'
+  (compiling source file 'main.cpp')
+  
+C:\Users\marij\source\repos\Mavarija\Text_Pokemon\Pokemon\ParalyzedEffect.h(11,19): error C2061: syntax error: identifier 'CPokemon'
+  (compiling source file 'main.cpp')
+  
+  ParalyzedEffect.cpp
+C:\Users\marij\source\repos\Mavarija\Text_Pokemon\Pokemon\Pokemon.h(51,18): error C2143: syntax error: missing ';' before '*'
+  (compiling source file 'ParalyzedEffect.cpp')
+  
+C:\Users\marij\source\repos\Mavarija\Text_Pokemon\Pokemon\Pokemon.h(51,5): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+  (compiling source file 'ParalyzedEffect.cpp')
+  
+C:\Users\marij\source\repos\Mavarija\Text_Pokemon\Pokemon\Pokemon.h(51,33): error C2238: unexpected token(s) preceding ';'
+  (compiling source file 'ParalyzedEffect.cpp')
+  
   Pidgey.cpp
+C:\Users\marij\source\repos\Mavarija\Text_Pokemon\Pokemon\IStatusEffect.h(9,27): error C2061: syntax error: identifier 'CPokemon'
+  (compiling source file 'Pidgey.cpp')
+  
+C:\Users\marij\source\repos\Mavarija\Text_Pokemon\Pokemon\IStatusEffect.h(16,29): error C2061: syntax error: identifier 'CPokemon'
+  (compiling source file 'Pidgey.cpp')
+  
+C:\Users\marij\source\repos\Mavarija\Text_Pokemon\Pokemon\IStatusEffect.h(19,27): error C2061: syntax error: identifier 'CPokemon'
+  (compiling source file 'Pidgey.cpp')
+  
+C:\Users\marij\source\repos\Mavarija\Text_Pokemon\Pokemon\ParalyzedEffect.h(8,19): error C2061: syntax error: identifier 'CPokemon'
+  (compiling source file 'Pidgey.cpp')
+  
+C:\Users\marij\source\repos\Mavarija\Text_Pokemon\Pokemon\ParalyzedEffect.h(10,21): error C2061: syntax error: identifier 'CPokemon'
+  (compiling source file 'Pidgey.cpp')
+  
+C:\Users\marij\source\repos\Mavarija\Text_Pokemon\Pokemon\ParalyzedEffect.h(11,19): error C2061: syntax error: identifier 'CPokemon'
+  (compiling source file 'Pidgey.cpp')
+  
   Pikachu.cpp
+C:\Users\marij\source\repos\Mavarija\Text_Pokemon\Pokemon\IStatusEffect.h(9,27): error C2061: syntax error: identifier 'CPokemon'
+  (compiling source file 'Pikachu.cpp')
+  
+C:\Users\marij\source\repos\Mavarija\Text_Pokemon\Pokemon\IStatusEffect.h(16,29): error C2061: syntax error: identifier 'CPokemon'
+  (compiling source file 'Pikachu.cpp')
+  
+C:\Users\marij\source\repos\Mavarija\Text_Pokemon\Pokemon\IStatusEffect.h(19,27): error C2061: syntax error: identifier 'CPokemon'
+  (compiling source file 'Pikachu.cpp')
+  
+C:\Users\marij\source\repos\Mavarija\Text_Pokemon\Pokemon\ParalyzedEffect.h(8,19): error C2061: syntax error: identifier 'CPokemon'
+  (compiling source file 'Pikachu.cpp')
+  
+C:\Users\marij\source\repos\Mavarija\Text_Pokemon\Pokemon\ParalyzedEffect.h(10,21): error C2061: syntax error: identifier 'CPokemon'
+  (compiling source file 'Pikachu.cpp')
+  
+C:\Users\marij\source\repos\Mavarija\Text_Pokemon\Pokemon\ParalyzedEffect.h(11,19): error C2061: syntax error: identifier 'CPokemon'
+  (compiling source file 'Pikachu.cpp')
+  
   Player.cpp
+C:\Users\marij\source\repos\Mavarija\Text_Pokemon\Pokemon\IStatusEffect.h(9,27): error C2061: syntax error: identifier 'CPokemon'
+  (compiling source file 'Player.cpp')
+  
+C:\Users\marij\source\repos\Mavarija\Text_Pokemon\Pokemon\IStatusEffect.h(16,29): error C2061: syntax error: identifier 'CPokemon'
+  (compiling source file 'Player.cpp')
+  
+C:\Users\marij\source\repos\Mavarija\Text_Pokemon\Pokemon\IStatusEffect.h(19,27): error C2061: syntax error: identifier 'CPokemon'
+  (compiling source file 'Player.cpp')
+  
+C:\Users\marij\source\repos\Mavarija\Text_Pokemon\Pokemon\ParalyzedEffect.h(8,19): error C2061: syntax error: identifier 'CPokemon'
+  (compiling source file 'Player.cpp')
+  
+C:\Users\marij\source\repos\Mavarija\Text_Pokemon\Pokemon\ParalyzedEffect.h(10,21): error C2061: syntax error: identifier 'CPokemon'
+  (compiling source file 'Player.cpp')
+  
+C:\Users\marij\source\repos\Mavarija\Text_Pokemon\Pokemon\ParalyzedEffect.h(11,19): error C2061: syntax error: identifier 'CPokemon'
+  (compiling source file 'Player.cpp')
+  
   Pokemon.cpp
+C:\Users\marij\source\repos\Mavarija\Text_Pokemon\Pokemon\IStatusEffect.h(9,27): error C2061: syntax error: identifier 'CPokemon'
+  (compiling source file 'Pokemon.cpp')
+  
+C:\Users\marij\source\repos\Mavarija\Text_Pokemon\Pokemon\IStatusEffect.h(16,29): error C2061: syntax error: identifier 'CPokemon'
+  (compiling source file 'Pokemon.cpp')
+  
+C:\Users\marij\source\repos\Mavarija\Text_Pokemon\Pokemon\IStatusEffect.h(19,27): error C2061: syntax error: identifier 'CPokemon'
+  (compiling source file 'Pokemon.cpp')
+  
+C:\Users\marij\source\repos\Mavarija\Text_Pokemon\Pokemon\ParalyzedEffect.h(8,19): error C2061: syntax error: identifier 'CPokemon'
+  (compiling source file 'Pokemon.cpp')
+  
+C:\Users\marij\source\repos\Mavarija\Text_Pokemon\Pokemon\ParalyzedEffect.h(10,21): error C2061: syntax error: identifier 'CPokemon'
+  (compiling source file 'Pokemon.cpp')
+  
+C:\Users\marij\source\repos\Mavarija\Text_Pokemon\Pokemon\ParalyzedEffect.h(11,19): error C2061: syntax error: identifier 'CPokemon'
+  (compiling source file 'Pokemon.cpp')
+  
+C:\Users\marij\source\repos\Mavarija\Text_Pokemon\Pokemon\Pokemon.cpp(102,31): error C2660: 'IStatusEffect::TurnEndEffect': function does not take 1 arguments
+      C:\Users\marij\source\repos\Mavarija\Text_Pokemon\Pokemon\IStatusEffect.h(16,15):
+      see declaration of 'IStatusEffect::TurnEndEffect'
+      C:\Users\marij\source\repos\Mavarija\Text_Pokemon\Pokemon\Pokemon.cpp(102,31):
+      while trying to match the argument list '(CPokemon *)'
+  
+C:\Users\marij\source\repos\Mavarija\Text_Pokemon\Pokemon\Pokemon.cpp(117,24): error C2660: 'IStatusEffect::ApplyEffect': function does not take 1 arguments
+      C:\Users\marij\source\repos\Mavarija\Text_Pokemon\Pokemon\IStatusEffect.h(9,15):
+      see declaration of 'IStatusEffect::ApplyEffect'
+      C:\Users\marij\source\repos\Mavarija\Text_Pokemon\Pokemon\Pokemon.cpp(117,24):
+      while trying to match the argument list '(CPokemon *)'
+  
   ProfessorOak.cpp
+C:\Users\marij\source\repos\Mavarija\Text_Pokemon\Pokemon\IStatusEffect.h(9,27): error C2061: syntax error: identifier 'CPokemon'
+  (compiling source file 'ProfessorOak.cpp')
+  
+C:\Users\marij\source\repos\Mavarija\Text_Pokemon\Pokemon\IStatusEffect.h(16,29): error C2061: syntax error: identifier 'CPokemon'
+  (compiling source file 'ProfessorOak.cpp')
+  
+C:\Users\marij\source\repos\Mavarija\Text_Pokemon\Pokemon\IStatusEffect.h(19,27): error C2061: syntax error: identifier 'CPokemon'
+  (compiling source file 'ProfessorOak.cpp')
+  
+C:\Users\marij\source\repos\Mavarija\Text_Pokemon\Pokemon\ParalyzedEffect.h(8,19): error C2061: syntax error: identifier 'CPokemon'
+  (compiling source file 'ProfessorOak.cpp')
+  
+C:\Users\marij\source\repos\Mavarija\Text_Pokemon\Pokemon\ParalyzedEffect.h(10,21): error C2061: syntax error: identifier 'CPokemon'
+  (compiling source file 'ProfessorOak.cpp')
+  
+C:\Users\marij\source\repos\Mavarija\Text_Pokemon\Pokemon\ParalyzedEffect.h(11,19): error C2061: syntax error: identifier 'CPokemon'
+  (compiling source file 'ProfessorOak.cpp')
+  
   Squirtle.cpp
-  Utility.cpp
+C:\Users\marij\source\repos\Mavarija\Text_Pokemon\Pokemon\IStatusEffect.h(9,27): error C2061: syntax error: identifier 'CPokemon'
+  (compiling source file 'Squirtle.cpp')
+  
+C:\Users\marij\source\repos\Mavarija\Text_Pokemon\Pokemon\IStatusEffect.h(16,29): error C2061: syntax error: identifier 'CPokemon'
+  (compiling source file 'Squirtle.cpp')
+  
+C:\Users\marij\source\repos\Mavarija\Text_Pokemon\Pokemon\IStatusEffect.h(19,27): error C2061: syntax error: identifier 'CPokemon'
+  (compiling source file 'Squirtle.cpp')
+  
+C:\Users\marij\source\repos\Mavarija\Text_Pokemon\Pokemon\ParalyzedEffect.h(8,19): error C2061: syntax error: identifier 'CPokemon'
+  (compiling source file 'Squirtle.cpp')
+  
+C:\Users\marij\source\repos\Mavarija\Text_Pokemon\Pokemon\ParalyzedEffect.h(10,21): error C2061: syntax error: identifier 'CPokemon'
+  (compiling source file 'Squirtle.cpp')
+  
+C:\Users\marij\source\repos\Mavarija\Text_Pokemon\Pokemon\ParalyzedEffect.h(11,19): error C2061: syntax error: identifier 'CPokemon'
+  (compiling source file 'Squirtle.cpp')
+  
   WildEncounterManager.cpp
+C:\Users\marij\source\repos\Mavarija\Text_Pokemon\Pokemon\IStatusEffect.h(9,27): error C2061: syntax error: identifier 'CPokemon'
+  (compiling source file 'WildEncounterManager.cpp')
+  
+C:\Users\marij\source\repos\Mavarija\Text_Pokemon\Pokemon\IStatusEffect.h(16,29): error C2061: syntax error: identifier 'CPokemon'
+  (compiling source file 'WildEncounterManager.cpp')
+  
+C:\Users\marij\source\repos\Mavarija\Text_Pokemon\Pokemon\IStatusEffect.h(19,27): error C2061: syntax error: identifier 'CPokemon'
+  (compiling source file 'WildEncounterManager.cpp')
+  
+C:\Users\marij\source\repos\Mavarija\Text_Pokemon\Pokemon\ParalyzedEffect.h(8,19): error C2061: syntax error: identifier 'CPokemon'
+  (compiling source file 'WildEncounterManager.cpp')
+  
+C:\Users\marij\source\repos\Mavarija\Text_Pokemon\Pokemon\ParalyzedEffect.h(10,21): error C2061: syntax error: identifier 'CPokemon'
+  (compiling source file 'WildEncounterManager.cpp')
+  
+C:\Users\marij\source\repos\Mavarija\Text_Pokemon\Pokemon\ParalyzedEffect.h(11,19): error C2061: syntax error: identifier 'CPokemon'
+  (compiling source file 'WildEncounterManager.cpp')
+  
 C:\Users\marij\source\repos\Mavarija\Text_Pokemon\Pokemon\WildEncounterManager.cpp(9,12): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
   Zubat.cpp
+C:\Users\marij\source\repos\Mavarija\Text_Pokemon\Pokemon\IStatusEffect.h(9,27): error C2061: syntax error: identifier 'CPokemon'
+  (compiling source file 'Zubat.cpp')
+  
+C:\Users\marij\source\repos\Mavarija\Text_Pokemon\Pokemon\IStatusEffect.h(16,29): error C2061: syntax error: identifier 'CPokemon'
+  (compiling source file 'Zubat.cpp')
+  
+C:\Users\marij\source\repos\Mavarija\Text_Pokemon\Pokemon\IStatusEffect.h(19,27): error C2061: syntax error: identifier 'CPokemon'
+  (compiling source file 'Zubat.cpp')
+  
+C:\Users\marij\source\repos\Mavarija\Text_Pokemon\Pokemon\ParalyzedEffect.h(8,19): error C2061: syntax error: identifier 'CPokemon'
+  (compiling source file 'Zubat.cpp')
+  
+C:\Users\marij\source\repos\Mavarija\Text_Pokemon\Pokemon\ParalyzedEffect.h(10,21): error C2061: syntax error: identifier 'CPokemon'
+  (compiling source file 'Zubat.cpp')
+  
+C:\Users\marij\source\repos\Mavarija\Text_Pokemon\Pokemon\ParalyzedEffect.h(11,19): error C2061: syntax error: identifier 'CPokemon'
+  (compiling source file 'Zubat.cpp')
+  
 C:\Users\marij\source\repos\Mavarija\Text_Pokemon\Pokemon\Zubat.cpp(39,39): warning C4244: '+=': conversion from 'double' to 'int', possible loss of data
-  main.cpp
   Generating Code...
-C:\Users\marij\source\repos\Mavarija\Text_Pokemon\Pokemon\Pokemon.cpp(50,1): warning C4715: 'CPokemon::IsFainted': not all control paths return a value
-  LINK : C:\Users\marij\source\repos\Mavarija\Text_Pokemon\Pokemon\x64\Debug\Pokemon.exe not found or not built by the last incremental link; performing full link
-BattleManager.obj : error LNK2001: unresolved external symbol "private: static struct SBattleState CBattleManager::battleState" (?battleState@CBattleManager@@0USBattleState@@A)
-C:\Users\marij\source\repos\Mavarija\Text_Pokemon\Pokemon\x64\Debug\Pokemon.exe : fatal error LNK1120: 1 unresolved externals

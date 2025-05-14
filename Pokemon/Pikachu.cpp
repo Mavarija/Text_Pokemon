@@ -48,6 +48,14 @@ void CPikachu::Attack(SMove _selectedMove, CPokemon* _target)
 	{
 		CPokemon::Attack(_selectedMove, _target);
 	}
+
+	if (_selectedMove.name == "THUNDER SHOCK")
+	{
+		if (_target->CanApplyEffect())
+		{
+			_target->ApplyEffect(EStatusEffectType::SET_Paralyzed);
+		}
+	}
 /*
 	SelectAndUseMove(_target);
 	ThunderShock(_target);

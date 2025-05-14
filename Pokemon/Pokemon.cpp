@@ -91,6 +91,41 @@ void CPokemon::ReduceAttackPower(int _reducedDamage)
     }
 }
 
+bool CPokemon::CanAttack()
+{
+    if (appliedEffect == nullptr)
+    {
+        return true;
+    }
+    else
+    {
+        return appliedEffect->TurnEndEffect(this);
+    }
+}
+
+bool CPokemon::CanApplyEffect()
+{
+    return appliedEffect == nullptr;
+}
+
+void CPokemon::ApplyEffect(EStatusEffectType _effectToApply)
+{
+    switch (_effectToApply)
+    {
+    case EStatusEffectType::SET_Paralyzed:
+        appliedEffect = new CParalyzedEffect();
+        appliedEffect->ApplyEffect(this);
+        break;
+    default:
+        appliedEffect = nullptr;
+    }
+}
+
+void CPokemon::ClearEffect()
+{
+    appliedEffect = nullptr;
+}
+
 void CPokemon::PrintAvailableMoves()
 {
     cout << name << "'s available moves:\n";
