@@ -34,20 +34,26 @@ void CBattleManager::Battle()
 		if (battleState.playerTurn)
 		{
 			// Player's turn to attack
+			battleState.playerPokemon->SelectAndUseMove(battleState.wildPokemon);
+		}
+		else
+		{
 			battleState.wildPokemon->SelectAndUseMove(battleState.playerPokemon);
 		}
+
 		// Update the battle state after the turn
 		UpdateBattleState();
-
 		// Switch turns
 		battleState.playerTurn = !battleState.playerTurn;
 
+		// Wait for enter
 		Utility::WaitForEnter();
 	}
 
 	// Printing win statements
 	HandleBattleOutcome();
 }
+
 // Method for batter end
 void CBattleManager::HandleBattleOutcome()
 {

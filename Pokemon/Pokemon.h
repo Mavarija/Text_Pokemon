@@ -2,6 +2,9 @@
 #include "Utility.h"
 #include "PokemonEnums.h"
 #include "Move.h"
+#include "StatusEffectType.h"
+#include "IStatusEffect.h"
+#include "ParalyzedEffect.h"
 #include <vector>
 
 class CPokemon
@@ -29,12 +32,23 @@ public:
     // Method for reducing dmg
     void ReduceAttackPower(int _reducedDamage);
 
+    // Check if the Pokemon can still attack
+    bool CanAttack();
+    // Check if a new status effect can be applied to Pokemon
+    bool CanApplyEffect();
+    // Clear the current status effect
+    void ApplyEffect(EStatusEffectType _effectToApply);
+    // Apply the given effect to the Pokemon
+    void ClearEffect();
+
     // Getters
     int GetHealth();
     string GetName();
 
     // Vector to store list of moves
     vector<SMove> moves;
+    // Status effect obj
+    IStatusEffect* appliedEffect;
 
 protected:
     // Members

@@ -173,5 +173,8 @@
     <ClInclude Include="Move.h">
       <Filter>Header Files\Pokemon</Filter>
     </ClInclude>
+    <ClInclude Include="StatusEffectType.h">
+      <Filter>Header Files\Pokemon\Pokemons\StatusEffects</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

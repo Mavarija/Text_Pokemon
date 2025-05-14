@@ -195,6 +195,7 @@
     <ClInclude Include="PokemonEnums.h" />
     <ClInclude Include="ProfessorOak.h" />
     <ClInclude Include="Squirtle.h" />
+    <ClInclude Include="StatusEffectType.h" />
     <ClInclude Include="Utility.h" />
     <ClInclude Include="WildEncounterManager.h" />
     <ClInclude Include="Zubat.h" />
